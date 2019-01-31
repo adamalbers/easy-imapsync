@@ -32,7 +32,7 @@ user1="$sourceUser$alias1"
 user2="$destinationUser$alias2"
 
 # Create a timestamped log file.
-logfile="$(date +%Y-%m-%d-%H-%M-%S)-$user2.txt"
+logfile="$(date +%Y-%m-%d-%H-%M-%S)-$alias2.txt"
 
 # Put it all together and run the sync.
 /usr/bin/imapsync --host1 $sourceServer --user1 "$user1" --password1 "$sourcePassword" --exchange1  --host2 $destinationServer --user2 "$user2" --password2 "$destinationPassword" --office2 --logfile $logfile --exclude $exclusions
